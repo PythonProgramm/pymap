@@ -37,7 +37,7 @@ def scan(ip, port):
         except:
             pass
 
-        print("Port " + str(port) + ' OPEN [' + banner.strip("\n") + "]")
+        print("Port " + str(port) + ' OPEN [' + banner.rstrip() + "]")
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
 	for port in range(int(ports[0]), int(ports[1]) + 1):
